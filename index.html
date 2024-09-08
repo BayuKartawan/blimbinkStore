@@ -15,7 +15,6 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            align-items: center;
             display: flex;
             flex-direction: column;
         }
@@ -42,6 +41,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            max-width: 1200px;
         }
 
         .header-text {
@@ -231,9 +231,6 @@
                 max-width: 200px;
             }
         }
-        .section-tentang{
-          max-width: 800px;
-        }
     </style>
 </head>
 <body>
@@ -267,7 +264,7 @@
   </section>
 
   <!-- Tentang Aplikasi -->
-  <section id="about"class="section-tentang">
+  <section id="about">
       <h2>Tentang Aplikasi</h2>
       <p>"Maulid Al-barzanji NW dan Lagu Lagu Perjuangan NW" adalah aplikasi berbasis Android (minimal versi Lollipop 5.0) yang menyediakan konten lengkap untuk Maulid Al-barzanji NW dan lagu-lagu perjuangan NW.</p>
       <p>Aplikasi ini berisi teks Arab, terjemahan, dan audio untuk Al-barzanji dan lagu perjuangan NW. Tersedia dalam mode gelap, dapat digunakan secara offline tanpa registrasi, dan gratis. Anda juga dapat mengatur ukuran teks sesuai kebutuhan, menjadikannya aplikasi yang nyaman digunakan dengan tampilan menarik.</p>
@@ -301,7 +298,7 @@
   <!-- Script untuk SweetAlert dan Slider -->
   <script>
       // URL unduhan file APK langsung
-      const downloadUrl = "https://github.com/BayuKartawan/blimbinkStore/blob/main/blimbink.nwdi.albarzanjinew_1.0.apk"; // Sesuaikan dengan link file APK di GitHub Anda
+      const downloadUrl = "https://raw.githubusercontent.com/BayuKartawan/blimbinkStore/main/blimbink.nwdi.albarzanjinew_1.0.apk"; // Sesuaikan dengan link file APK di GitHub Anda
 
       // Fungsi untuk menampilkan SweetAlert dan memulai unduhan
       function downloadApp() {
