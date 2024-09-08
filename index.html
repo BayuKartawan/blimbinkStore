@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promosi Aplikasi Android</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, section {
+            min-height: 100vh; /* Tinggi minimum sesuai layar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #067404, #81C784);
+            color: white;
+            padding: 40px 20px;
+        }
+
+        /* Flexbox untuk teks dan gambar header */
+        .header-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 1200px;
+        }
+
+        .header-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .header-text h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .header-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .header-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-image img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        section {
+            flex-direction: column;
+            padding: 40px 20px;
+        }
+
+        section#about {
+            background-color: #f9f9f9;
+        }
+
+        section#about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #388E3C;
+        }
+
+        /* Slider */
+        #slider {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slides img {
+            width: 100%;
+            flex-shrink: 0;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .nav-arrows {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .nav-arrows button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .nav-arrows button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #388E3C;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            .header-text {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .header-image {
+                margin-top: 20px;
+            }
+
+            .header-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .download-btn {
+                font-size: 1rem;
+                padding: 12px 24px;
+            }
+
+            section img {
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .download-btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            section img {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <!-- Header dengan Teks dan Gambar -->
+  <header id="home">
+      <div class="header-content">
+          <div class="header-text">
+              <h1>Maulid Al-barzanji NW dan Lagu Lagu Perjuangan NW</h1>
+              <p>Aplikasi berbasis Android yang menyediakan Al-barzanji NW dan lagu-lagu perjuangan NW. Nikmati teks Arab, terjemahan, dan audio dengan fitur yang lengkap dan menarik.</p>
+              <a href="#" class="download-btn" onclick="downloadApp()">Unduh Sekarang</a>
+          </div>
+          <div class="header-image">
+              <img src="logoApp.png" alt="Tampilan Aplikasi" />
+          </div>
+      </div>
+  </header>
+
+  <!-- Slider Gambar -->
+  <section id="slider-section">
+      <div id="slider">
+          <div class="slides">
+              <img src="demo1.png" alt="Tampilan Aplikasi 1">
+              <img src="demo2.png" alt="Tampilan Aplikasi 2">
+              <img src="demo3.png" alt="Tampilan Aplikasi 3">
+          </div>
+          <div class="nav-arrows">
+              <button id="prev">&#10094;</button>
+              <button id="next">&#10095;</button>
+          </div>
+      </div>
+  </section>
+
+  <!-- Tentang Aplikasi -->
+  <section id="about">
+      <h2>Tentang Aplikasi</h2>
+      <p>"Maulid Al-barzanji NW dan Lagu Lagu Perjuangan NW" adalah aplikasi berbasis Android (minimal versi Lollipop 5.0) yang menyediakan konten lengkap untuk Maulid Al-barzanji NW dan lagu-lagu perjuangan NW.</p>
+      <p>Aplikasi ini berisi teks Arab, terjemahan, dan audio untuk Al-barzanji dan lagu perjuangan NW. Tersedia dalam mode gelap, dapat digunakan secara offline tanpa registrasi, dan gratis. Anda juga dapat mengatur ukuran teks sesuai kebutuhan, menjadikannya aplikasi yang nyaman digunakan dengan tampilan menarik.</p>
+      <img src="logoApp.png" alt="Gambar Aplikasi" />
+      <br>
+      <a href="#" class="download-btn" onclick="downloadApp()">Unduh Sekarang</a>
+  </section>
+
+  <!-- Fitur Utama Aplikasi -->
+  <section id="features">
+      <h2>Fitur Utama</h2>
+      <ul>
+          <li><strong>Konten Lengkap:</strong> Al-barzanji NW dan lagu-lagu perjuangan NW dengan teks Arab, terjemahan, dan audio.</li>
+          <li><strong>Offline dan Gratis:</strong> Aplikasi dapat digunakan tanpa koneksi internet dan tanpa biaya.</li>
+          <li><strong>Dukungan Mode Gelap:</strong> Nikmati pengalaman pengguna yang lebih nyaman dengan mode gelap.</li>
+          <li><strong>Teks Dapat Diatur:</strong> Ukuran teks dapat diatur sesuai kebutuhan pengguna.</li>
+          <li><strong>Tampilan Menarik:</strong> Desain antarmuka yang modern dan mudah digunakan.</li>
+      </ul>
+  </section>
+
+  <!-- Navbar untuk Scroll -->
+  <nav>
+      <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#slider-section">Galeri</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#features">Fitur</a></li>
+      </ul>
+  </nav>
+
+  <!-- Script untuk SweetAlert dan Slider -->
+  <script>
+      // URL unduhan file APK langsung
+      const downloadUrl = "https://github.com/BayuKartawan/newalbarzanji_nwdi/raw/master/com.hizibnw.hizibapp3_1.6.apk"; // Sesuaikan dengan link file APK di GitHub Anda
+
+      // Fungsi untuk menampilkan SweetAlert dan memulai unduhan
+      function downloadApp() {
+          const appSize = 42; // Sesuaikan ukuran file APK Anda
+
+          Swal.fire({
+              title: 'Unduh Aplikasi?',
+              text: `Ukuran file aplikasi adalah ${appSize} MB. Apakah Anda ingin melanjutkan?`,
+              icon: 'info',
+              showCancelButton: true,
+              confirmButtonText: 'Unduh',
+              cancelButtonText: 'Batal',
+              reverseButtons: true
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  Swal.fire(
+                      'Sedang Mengunduh!',
+                      'Aplikasi Anda sedang diunduh...',
+                      'success'
+                  );
+
+                  // Gunakan elemen <a> untuk memulai unduhan
+                  const a = document.createElement('a');
+                  a.href = downloadUrl;
+                  a.download = 'app.apk'; // Nama file unduhan
+                  document.body.appendChild(a);
+                  a.click();
+                  a.remove();
+              } else if (result.dismiss === Swal.DismissReason.cancel) {
+                  Swal.fire(
+                      'Dibatalkan',
+                      'Unduhan aplikasi dibatalkan.',
+                      'error'
+                  );
+              }
+          });
+      }
+
+
+      // Slider Logika JavaScript
+      const slides = document.querySelector('.slides');
+      const images = document.querySelectorAll('.slides img');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+
+      let counter = 0;
+      const size = images[0].clientWidth;
+
+      next.addEventListener('click', () => {
+          if (counter >= images.length - 1) return;
+          counter++;
+          slides.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      });
+
+      prev.addEventListener('click', () => {
+          if (counter <= 0) return;
+          counter--;
+          slides.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      });
+
+      window.addEventListener('resize', () => {
+          slides.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      });
+  </script>
+</body>
+
+
+</html>
