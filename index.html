@@ -89,9 +89,17 @@
       background-color: #f9f9f9;
     }
 
+    section#about p {
+      text-align: justify;
+    }
+
     section#about h2 {
       font-size: 2rem;
       margin-bottom: 20px;
+    }
+
+    section#features ul {
+      text-align: left;
     }
 
     section img {
@@ -135,10 +143,11 @@
     }
 
     .slides img {
-      width: 100%;
+      width: 100vw;
       flex-shrink: 0;
       height: auto;
       border-radius: 10px;
+      cursor: pointer;
     }
 
     .nav-arrows {
@@ -161,6 +170,35 @@
 
     .nav-arrows button:hover {
       background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Fullscreen mode */
+    .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s;
+    }
+
+    .fullscreen.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .fullscreen img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 10px;
     }
 
     nav {
@@ -239,7 +277,7 @@
       }
 
       nav ul li {
-        margin: 0 5px;
+        margin: 0 2px;
       }
     }
   </style>
@@ -269,9 +307,9 @@
   <section id="slider-section">
     <div id="slider">
       <div class="slides">
-        <img src="demo1.png" alt="Tampilan Aplikasi 1" />
-        <img src="demo2.png" alt="Tampilan Aplikasi 2" />
-        <img src="demo3.png" alt="Tampilan Aplikasi 3" />
+        <img src="demo1.png" alt="Tampilan Aplikasi 1" onclick="openFullscreen(this)" />
+        <img src="demo2.png" alt="Tampilan Aplikasi 2" onclick="openFullscreen(this)" />
+        <img src="demo3.png" alt="Tampilan Aplikasi 3" onclick="openFullscreen(this)" />
       </div>
       <div class="nav-arrows">
         <button id="prev">&#10094;</button>
@@ -279,6 +317,12 @@
       </div>
     </div>
   </section>
+
+  <!-- Fullscreen container -->
+  <div id="fullscreen-container" class="fullscreen" onclick="closeFullscreen()">
+    <img id="fullscreen-image" src="" alt="Gambar Fullscreen" />
+  </div>
+
 
   <!-- Tentang Aplikasi -->
   <section id="about">
@@ -298,7 +342,7 @@
     <img src="logoApp.png" alt="Gambar Aplikasi" />
     <br />
     <a href="#" class="download-btn" onclick="downloadApp()">Unduh Sekarang</a>
-    
+
   </section>
 
   <!-- Fitur Utama Aplikasi -->
@@ -343,11 +387,11 @@
     // URL unduhan file APK langsung
     const downloadUrl =
       "https://raw.githubusercontent.com/BayuKartawan/blimbinkStore/main/Maulid%20Al-Barzanji%20dan%20Lagu%20Perjuangan%20NW.apk"; // Sesuaikan dengan link file APK di GitHub Anda
-
+  
     // Fungsi untuk menampilkan SweetAlert dan memulai unduhan
     function downloadApp() {
       const appSize = 40; // Sesuaikan ukuran file APK Anda
-
+  
       Swal.fire({
         title: "Unduh Aplikasi?",
         text: `Ukuran file aplikasi adalah ${appSize} MB. Apakah Anda ingin melanjutkan?`,
@@ -363,7 +407,7 @@
             "Aplikasi Anda sedang diunduh...",
             "success"
           );
-
+  
           // Gunakan elemen <a> untuk memulai unduhan
           const a = document.createElement("a");
           a.href = downloadUrl;
@@ -376,32 +420,54 @@
         }
       });
     }
-
+  
     // Slider Logika JavaScript
     const slides = document.querySelector(".slides");
     const images = document.querySelectorAll(".slides img");
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
-
+  
     let counter = 0;
-    const size = images[0].clientWidth;
-
+    let size = images[0].clientWidth;
+  
     next.addEventListener("click", () => {
       if (counter >= images.length - 1) return;
       counter++;
       slides.style.transform = "translateX(" + -size * counter + "px)";
     });
-
+  
     prev.addEventListener("click", () => {
       if (counter <= 0) return;
       counter--;
       slides.style.transform = "translateX(" + -size * counter + "px)";
     });
-
+  
     window.addEventListener("resize", () => {
+      size = images[0].clientWidth; // Update ukuran gambar saat di-resize
       slides.style.transform = "translateX(" + -size * counter + "px)";
     });
+  
+    // Fungsi untuk membuka gambar dalam mode full screen
+    function openFullscreen(img) {
+      const fullscreenContainer = document.getElementById("fullscreen-container");
+      const fullscreenImage = document.getElementById("fullscreen-image");
+      fullscreenImage.src = img.src;
+      fullscreenContainer.classList.add("active");
+    }
+  
+    // Fungsi untuk menutup mode full screen
+    function closeFullscreen() {
+      const fullscreenContainer = document.getElementById("fullscreen-container");
+      fullscreenContainer.classList.remove("active");
+    }
+  
+    // Menambahkan event listener ke gambar untuk membuka mode full screen
+    images.forEach((image) => {
+      image.addEventListener("click", () => openFullscreen(image));
+    });
   </script>
+  
+  
 </body>
 
 </html>
