@@ -4,6 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Warna notification bar di Android -->
+  <meta name="theme-color" content="#067404">
+
+  <!-- Warna status bar di Safari iOS -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="icon" href="logoo.svg" rel="shortcut icon" type="image/x-icon" />
   <link href="logoo.svg" rel="apple-touch-icon" />
   <title>
@@ -97,7 +105,8 @@
       font-size: 2rem;
       margin-bottom: 20px;
     }
-    .pembungkus-teks-tentang{
+
+    .pembungkus-teks-tentang {
       max-width: 900px;
     }
 
@@ -205,21 +214,28 @@
     }
 
     nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparansi 80% */
-    backdrop-filter: blur(10px); /* Efek blur */
-    -webkit-backdrop-filter: blur(10px); /* Efek blur untuk WebKit */
-    z-index: 1000;
-    transform: translateY(100%); /* Nav disembunyikan di awal */
-    transition: transform 0.3s ease; /* Transisi kemunculan nav */
-}
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8); /* Contoh warna putih transparan */
+    color: #067404; /* Warna teks */
+      /* Transparansi 80% */
+      backdrop-filter: blur(10px);
+      /* Efek blur */
+      -webkit-backdrop-filter: blur(10px);
+      /* Efek blur untuk WebKit */
+      z-index: 1000;
+      transform: translateY(100%);
+      /* Nav disembunyikan di awal */
+      transition: transform 0.3s ease;
+      /* Transisi kemunculan nav */
+    }
 
-nav.show {
-    transform: translateY(0); /* Nav muncul saat ada kelas 'show' */
-}
+    nav.show {
+      transform: translateY(0);
+      /* Nav muncul saat ada kelas 'show' */
+    }
 
 
 
@@ -351,21 +367,27 @@ nav.show {
   <!-- Tentang Aplikasi -->
   <section id="about">
     <div class="pembungkus-teks-tentang">
-    <h2>Tentang Aplikasi</h2>
-    <p>
-      "Maulid Al-barzanji NW dan Lagu Lagu Perjuangan NW" adalah aplikasi berbasis Android (minimal versi Lollipop 5.0) yang menyediakan konten lengkap untuk Maulid Al-barzanji NW dan lagu-lagu perjuangan NW.
-  </p><br>
-  <p>
-      Aplikasi ini berisi teks Arab, terjemahan, dan audio untuk Al-barzanji dan lagu perjuangan NW. Tersedia dalam mode gelap, dapat digunakan secara offline tanpa registrasi, dan gratis. Anda juga dapat mengatur ukuran teks sesuai kebutuhan, menjadikannya aplikasi yang nyaman digunakan dengan tampilan menarik.
-  </p><br>
-  <p>
-      Aplikasi ini dirancang oleh <strong>Bayu Kartawan</strong> pada tahun <strong>2024</strong>. Info lebih lanjut tentang pengembang dapat ditemukan melalui: <strong>Instagram </strong>: <a href="https://www.instagram.com/blim.bink" target="_blank">@blim.bink</a><strong>, Facebook </strong>: <a href="https://www.facebook.com/BlimbinkGo" target="_blank">Blimbink Go</a>
-  </p><br>
-  
-    <img src="1.png" alt="Gambar Aplikasi" />
-    <br />
-    <a href="#" class="download-btn" onclick="downloadApp()">Unduh Sekarang</a>
-  </div>
+      <h2>Tentang Aplikasi</h2>
+      <p>
+        "Maulid Al-barzanji NW dan Lagu Lagu Perjuangan NW" adalah aplikasi berbasis Android (minimal versi Lollipop
+        5.0) yang menyediakan konten lengkap untuk Maulid Al-barzanji NW dan lagu-lagu perjuangan NW.
+      </p><br>
+      <p>
+        Aplikasi ini berisi teks Arab, terjemahan, dan audio untuk Al-barzanji dan lagu perjuangan NW. Tersedia dalam
+        mode gelap, dapat digunakan secara offline tanpa registrasi, dan gratis. Anda juga dapat mengatur ukuran teks
+        sesuai kebutuhan, menjadikannya aplikasi yang nyaman digunakan dengan tampilan menarik.
+      </p><br>
+      <p>
+        Aplikasi ini dirancang oleh <strong>Bayu Kartawan</strong> pada tahun <strong>2024</strong>. Info lebih lanjut
+        tentang pengembang dapat ditemukan melalui: <strong>Instagram </strong>: <a
+          href="https://www.instagram.com/blim.bink" target="_blank">@blim.bink</a><strong>, Facebook </strong>: <a
+          href="https://www.facebook.com/BlimbinkGo" target="_blank">Blimbink Go</a>
+      </p><br>
+
+      <img src="1.png" alt="Gambar Aplikasi" />
+      <br />
+      <a href="#" class="download-btn" onclick="downloadApp()">Unduh Sekarang</a>
+    </div>
   </section>
 
   <!-- Fitur Utama Aplikasi -->
@@ -398,12 +420,12 @@ nav.show {
   <!-- Navbar untuk Scroll -->
   <nav id="navbar">
     <ul>
-        <li><a href="#home" class="nav-link">Beranda</a></li>
-        <li><a href="#slider-section" class="nav-link">Galeri</a></li>
-        <li><a href="#about" class="nav-link">Tentang</a></li>
-        <li><a href="#features" class="nav-link">Fitur</a></li>
+      <li><a href="#home" class="nav-link">Beranda</a></li>
+      <li><a href="#slider-section" class="nav-link">Galeri</a></li>
+      <li><a href="#about" class="nav-link">Tentang</a></li>
+      <li><a href="#features" class="nav-link">Fitur</a></li>
     </ul>
-</nav>
+  </nav>
 
 
   <!-- Script untuk SweetAlert dan Slider -->
@@ -491,33 +513,33 @@ nav.show {
     });
 
     // Smooth scroll on navbar link click
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        
+
         // Scroll to the section smoothly
         targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+          behavior: 'smooth',
+          block: 'start'
         });
+      });
     });
-});
 
 
     //logika muncul tutup navbar
-    window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    const headerHeight = document.querySelector('header').offsetHeight;
-    const sliderSectionTop = document.getElementById('slider-section').offsetTop;
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const sliderSectionTop = document.getElementById('slider-section').offsetTop;
 
-    if (window.scrollY > headerHeight || window.scrollY > (sliderSectionTop - window.innerHeight + 10)) {
+      if (window.scrollY > headerHeight || window.scrollY > (sliderSectionTop - window.innerHeight + 10)) {
         navbar.classList.add('show'); // Menampilkan nav saat scroll di bawah header atau bagian galeri
-    } else {
+      } else {
         navbar.classList.remove('show'); // Menyembunyikan nav saat berada di dalam header atau di awal galeri
-    }
-});
+      }
+    });
 
 
   </script>
