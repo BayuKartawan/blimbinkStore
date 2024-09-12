@@ -8,9 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Meta Description dan Keywords -->
-<meta name="description" content="Aplikasi Android untuk digitalisasi kitab Al-Barzanji dan lagu perjuangan Nahdlatul Wathan, memudahkan jamaah NW dan NWDI dalam mengakses teks Al-Barzanji dan lagu-lagu NW secara digital.">
-<meta name="keywords" content="aplikasi al-barzanji, lagu perjuangan NW, Nahdlatul Wathan, NWDI, kitab al-barzanji digital, aplikasi android NW, digitalisasi al-barzanji, lagu-lagu NW, maulid al-barzanji, aplikasi kitab NW">
-<meta name="robots" content="index, follow">
+  <meta name="description"
+    content="Aplikasi Android untuk digitalisasi kitab Al-Barzanji dan lagu perjuangan Nahdlatul Wathan, memudahkan jamaah NW dan NWDI dalam mengakses teks Al-Barzanji dan lagu-lagu NW secara digital.">
+  <meta name="keywords"
+    content="aplikasi al-barzanji, lagu perjuangan NW, Nahdlatul Wathan, NWDI, kitab al-barzanji digital, aplikasi android NW, digitalisasi al-barzanji, lagu-lagu NW, maulid al-barzanji, aplikasi kitab NW">
+  <meta name="robots" content="index, follow">
 
 
 
@@ -92,9 +94,13 @@
       max-width: 300px;
       width: 100%;
       height: auto;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
     }
+
+    .shadow-svg {
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+    }
+
 
     section {
       flex-direction: column;
@@ -119,7 +125,11 @@
     }
 
     section#features ul {
-      text-align: left;
+      text-align: justify;
+    }
+    section#features h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
     section img {
@@ -327,17 +337,20 @@
   <header id="home">
     <div class="header-content">
       <div class="header-text">
-        <h1>Maulid Al-barzanji NW dan Lagu Lagu Perjuangan NW</h1>
+        <h1>Maulid Al-barzanji dan Lagu Lagu Nahdlatul Wathan (NW)</h1>
         <p>
-          Aplikasi berbasis Android yang menyediakan Al-barzanji NW dan
+          Aplikasi berbasis Android yang menyediakan Al-barzanji Nahdlatul Wathan (NW) dan
           lagu-lagu perjuangan NW. Nikmati teks Arab, terjemahan, dan audio
           dengan fitur yang lengkap dan menarik.
         </p>
-        <a href="#" class="download-btn" onclick="downloadApp()"><i class="fa-regular fa-circle-down"></i> Unduh Sekarang</a>
-        <a href="https://forms.gle/SUFLNF9HfraJmBWNA" class="download-btn" target="_blank"><i class="fa-regular fa-file-lines"></i> Isi Kuesioner</a>
+        <a href="#" class="download-btn" onclick="downloadApp()"><i class="fa-regular fa-circle-down"></i> Unduh
+          Sekarang</a>
+        <a href="https://forms.gle/SUFLNF9HfraJmBWNA" class="download-btn" target="_blank"><i
+            class="fa-regular fa-file-lines"></i> Isi Kuesioner</a>
       </div>
       <div class="header-image">
-        <img src="logoo.svg" alt="Tampilan Aplikasi" />
+        <img src="logoo.svg" alt="Logo Aplikasi Maulid al-barzanji Nahdlatul Wathan dan lagu-lagu perjuangan NW NWDI"
+          class="shadow-svg" />
       </div>
     </div>
   </header>
@@ -346,20 +359,34 @@
   <section id="slider-section">
     <div id="slider">
       <div class="slides">
-        <img src="albarzanji day.jpg" alt="Tampilan Aplikasi 1" onclick="openFullscreen(this)" />
-        <img src="albarzanji night.jpg" alt="Tampilan Aplikasi 2" onclick="openFullscreen(this)" />
-        <img src="baca day.jpg" alt="Tampilan Aplikasi 3" onclick="openFullscreen(this)" />
-        <img src="baca night.jpg" alt="Tampilan Aplikasi 4" onclick="openFullscreen(this)" />
-        <img src="cari day.jpg" alt="Tampilan Aplikasi 5" onclick="openFullscreen(this)" />
-        <img src="cari night.jpg" alt="Tampilan Aplikasi 6" onclick="openFullscreen(this)" />
-        <img src="daftarisi day.jpg" alt="Tampilan Aplikasi 7" onclick="openFullscreen(this)" />
-        <img src="daftarisi night.jpg" alt="Tampilan Aplikasi 8" onclick="openFullscreen(this)" />
-        <img src="intro day.jpg" alt="Tampilan Aplikasi 9" onclick="openFullscreen(this)" />
-        <img src="intro night.jpg" alt="Tampilan Aplikasi 10" onclick="openFullscreen(this)" />
-        <img src="lagu day.jpg" alt="Tampilan Aplikasi 1" onclick="openFullscreen(this)" />
-        <img src="lagu night.jpg" alt="Tampilan Aplikasi 2" onclick="openFullscreen(this)" />
-        <img src="list baca day.jpg" alt="Tampilan Aplikasi 3" onclick="openFullscreen(this)" />
-        <img src="list baca night.jpg" alt="Tampilan Aplikasi 4" onclick="openFullscreen(this)" />
+        <img src="albarzanji day.jpg" alt="Tampilan halaman detail al barzanji nw mode terang"
+          onclick="openFullscreen(this)" />
+        <img src="albarzanji night.jpg" alt="Tampilan halaman detail al barzanji nw mode gelap"
+          onclick="openFullscreen(this)" />
+        <img src="baca day.jpg" alt="Tampilan halaman baca al barzanji nw yang sudah diurutkan mode terang"
+          onclick="openFullscreen(this)" />
+        <img src="baca night.jpg" alt="Tampilan halaman baca al barzanji nw yang sudah diurutkan mode gelap"
+          onclick="openFullscreen(this)" />
+        <img src="cari day.jpg" alt="Pencairian isi al barzanji nw mode terang" onclick="openFullscreen(this)" />
+        <img src="cari night.jpg" alt="Pencairian isi al barzanji nw mode gelap" onclick="openFullscreen(this)" />
+        <img src="daftarisi day.jpg" alt="halaman daftar isi al barzanji nw mode terang"
+          onclick="openFullscreen(this)" />
+        <img src="daftarisi night.jpg" alt="halaman daftar isi al barzanji nw mode malam"
+          onclick="openFullscreen(this)" />
+        <img src="intro day.jpg" alt="halaman awal atau flash screen al barzanji nw mode terang"
+          onclick="openFullscreen(this)" />
+        <img src="intro night.jpg" alt="halaman awal atau flash screen al barzanji nw mode malam"
+          onclick="openFullscreen(this)" />
+        <img src="lagu day.jpg" alt="halaman daftar lagu perjuangan nw mode terang" onclick="openFullscreen(this)" />
+        <img src="lagu night.jpg" alt="halaman daftar lagu perjuangan nw mode gelap" onclick="openFullscreen(this)" />
+        <img src="list baca day.jpg" alt="list baca albarzanji nw mode terang" onclick="openFullscreen(this)" />
+        <img src="list baca night.jpg" alt="list baca albarzanji nw mode malam" onclick="openFullscreen(this)" />
+        <img src="yamanyaru day.jpg" alt="Tampilan halaman detail yaman yaru lagu nw mode terang"
+          onclick="openFullscreen(this)" />
+        <img src="yamanyaru night.jpg" alt="Tampilan halaman detail yaman yaru lagu nw mode gelap"
+          onclick="openFullscreen(this)" />
+        <img src="tentang night.jpg" alt="Tampilan halaman tentang alarzanji nw mode gelap"
+          onclick="openFullscreen(this)" />
       </div>
       <div class="nav-arrows">
         <button id="prev">&#10094;</button>
@@ -379,7 +406,14 @@
     <div class="pembungkus-teks-tentang">
       <h2>Tentang Aplikasi</h2>
       <p>
-        "Maulid Al-barzanji NW dan Lagu Lagu Perjuangan NW" adalah aplikasi berbasis Android (minimal versi Lollipop
+        Selamat datang di aplikasi inovatif yang dirancang khusus untuk mempermudah akses dan penggunaan kitab
+        Al-Barzanji serta lagu perjuangan Nahdlatul Wathan (NW) secara digital. Aplikasi Android ini adalah solusi ideal
+        bagi jamaah Nahdlatul Wathan (NW) dan Nahdlatul Wathan Diniyah Islamiyah (NWDI) untuk menikmati teks Al-Barzanji
+        dan koleksi lagu perjuangan NW dengan cara yang modern dan praktis.
+      </p><br>
+      <p>
+        "Maulid Al-barzanji dan Lagu Lagu Perjuangan Nahdlatul Wathan (NW)" adalah aplikasi berbasis Android (minimal
+        versi Lollipop
         5.0) yang menyediakan konten lengkap untuk Maulid Al-barzanji NW dan lagu-lagu perjuangan NW.
       </p><br>
       <p>
@@ -388,43 +422,52 @@
         sesuai kebutuhan, menjadikannya aplikasi yang nyaman digunakan dengan tampilan menarik.
       </p><br>
       <p>
-        Aplikasi ini dirancang oleh <strong>Bayu Kartawan</strong> pada tahun <strong>2024</strong>. Info lebih lanjut
-        tentang pengembang dapat ditemukan melalui: <strong>Instagram </strong>: <a
-          href="https://www.instagram.com/blim.bink" target="_blank">@blim.bink</a><strong>, Facebook </strong>: <a
-          href="https://www.facebook.com/BlimbinkGo" target="_blank">Blimbink Go</a>
+        Aplikasi ini dirancang dengan 💖 oleh <strong>Bayu Kartawan✨</strong> pada tahun <strong>2024🚀</strong>. Info
+        lebih lanjut
+        tentang pengembang dapat ditemukan melalui: <strong>📷 Instagram </strong>: <a
+          href="https://www.instagram.com/blim.bink" target="_blank">@blim.bink</a><strong>, 📷 Facebook </strong>: <a
+          href="https://www.facebook.com/tuanpapuk.tuanpapuk" target="_blank">Blimbink Go</a>
       </p><br>
 
-      <img src="1.png" alt="Gambar Aplikasi" />
+      <img src="1.png" alt="Gambar Aplikasi albarzanji nw" />
       <br />
-      <a href="#" class="download-btn" onclick="downloadApp()"><i class="fa-regular fa-circle-down"></i> Unduh Sekarang</a>
+      <a href="#" class="download-btn" onclick="downloadApp()"><i class="fa-regular fa-circle-down"></i> Unduh
+        Sekarang</a>
     </div>
   </section>
 
   <!-- Fitur Utama Aplikasi -->
   <section id="features">
-    <h2>Fitur Utama</h2><br>
-    <ul>
-      <li>
-        <strong>Konten Lengkap:</strong> Al-barzanji NW dan lagu-lagu
-        perjuangan NW dengan teks Arab, terjemahan, dan audio.
-      </li>
-      <li>
-        <strong>Offline dan Gratis:</strong> Aplikasi dapat digunakan tanpa
-        koneksi internet dan tanpa biaya.
-      </li>
-      <li>
-        <strong>Dukungan Mode Gelap:</strong> Nikmati pengalaman pengguna yang
-        lebih nyaman dengan mode gelap.
-      </li>
-      <li>
-        <strong>Teks Dapat Diatur:</strong> Ukuran teks dapat diatur sesuai
-        kebutuhan pengguna.
-      </li>
-      <li>
-        <strong>Tampilan Menarik:</strong> Desain antarmuka yang modern dan
-        mudah digunakan.
-      </li>
-    </ul>
+    <h2>Fitur Utama</h2>
+    <div class="pembungkus-teks-tentang">
+      <ul>
+        <li>
+          <strong>Konten Lengkap Al-barzanji NW dan lagu-lagu
+            perjuangan NW dengan teks Arab, terjemahan, dan audio diantaranya:</strong> Qiroatul fatihah, Surah yaasin,
+          Sholawat fathih, Al-barzanji, Tholaal Badru ‘alaina, Iilahitam, Sholawat badriah, Sholawat nahdlatain, Lillahi
+          zainuddin, Do’a pusaka, Do’a do’a, Antiya Pancor, Ya Fata Sasak, Ya dzal jala liwal iqram, Nahdlatain, Ya man
+          yarumul ula, Obat sakit jahil, Ahlan biwaf bizairi & pacu gama’, Mars Hultah NWDI, Pacu gama’, Tanawwaroma,
+          Bersatu haluwan, Kami benihana NW, Mars NWDI dan NWDI daiman abada
+
+        </li>
+        <li>
+          <strong>Offline dan Gratis:</strong> Aplikasi dapat digunakan tanpa
+          koneksi internet dan tanpa biaya.
+        </li>
+        <li>
+          <strong>Dukungan Mode Gelap:</strong> Nikmati pengalaman pengguna yang
+          lebih nyaman dengan mode gelap.
+        </li>
+        <li>
+          <strong>Teks Dapat Diatur:</strong> Ukuran teks dapat diatur sesuai
+          kebutuhan pengguna.
+        </li>
+        <li>
+          <strong>Tampilan Menarik:</strong> Desain antarmuka yang modern dan
+          mudah digunakan.
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- Navbar untuk Scroll -->
