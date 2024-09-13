@@ -7,13 +7,17 @@
   <meta name="google-site-verification" content="9voUjltqAHdCYJoDywfcslOdrzY5gGW1sTqM7EhKKHA" />
 
   <!-- Meta Description dan Keywords -->
-  <meta name="description" content="Aplikasi Android untuk digitalisasi kitab Al-Barzanji dan lagu perjuangan Nahdlatul Wathan, memudahkan jamaah NW dan NWDI dalam mengakses teks Al-Barzanji dan lagu-lagu NW secara digital.">
-  <meta name="keywords" content="aplikasi al-barzanji, lagu perjuangan NW, Nahdlatul Wathan, NWDI, kitab al-barzanji digital, aplikasi android NW, digitalisasi al-barzanji, lagu-lagu NW, maulid al-barzanji, aplikasi kitab NW">
-  <meta name="robots" content="index, follow">
+  <meta name="description"
+    content="Aplikasi Android untuk digitalisasi kitab Al-Barzanji dan lagu perjuangan Nahdlatul Wathan, memudahkan jamaah NW dan NWDI dalam mengakses teks Al-Barzanji dan lagu-lagu NW secara digital." />
+  <meta name="keywords"
+    content="aplikasi al-barzanji, lagu perjuangan NW, Nahdlatul Wathan, NWDI, kitab al-barzanji digital, aplikasi android NW, digitalisasi al-barzanji, lagu-lagu NW, maulid al-barzanji, aplikasi kitab NW" />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Unduh Aplikasi Al-Barzanji Nahdlatul Wathan (NW), teks arab✨, terjemah📖 dan audio🎵" />
-  <meta property="og:description" content="Aplikasi Android untuk digitalisasi kitab Al-Barzanji dan lagu perjuangan Nahdlatul Wathan. Memudahkan jamaah NW dan NWDI dalam mengakses teks Al-Barzanji serta lagu-lagu NW secara digital." />
+  <meta property="og:title"
+    content="Unduh Aplikasi Al-Barzanji Nahdlatul Wathan (NW), teks arab✨, terjemah📖 dan audio🎵" />
+  <meta property="og:description"
+    content="Aplikasi Android untuk digitalisasi kitab Al-Barzanji dan lagu perjuangan Nahdlatul Wathan. Memudahkan jamaah NW dan NWDI dalam mengakses teks Al-Barzanji serta lagu-lagu NW secara digital." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bayukartawan.github.io/blimbinkStore/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/BayuKartawan/blimbinkStore/main/og-logo.jpg" />
@@ -21,476 +25,269 @@
   <meta property="og:locale" content="id_ID" />
 
   <!-- Warna notification bar di Android -->
-  <meta name="theme-color" content="#067404">
+  <meta name="theme-color" content="#067404" />
 
   <!-- Warna status bar di Safari iOS -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Favicon -->
   <link rel="icon" href="logoo.svg" type="image/x-icon" />
   <link href="https://raw.githubusercontent.com/BayuKartawan/blimbinkStore/main/og-logo.jpg" rel="apple-touch-icon" />
 
   <!-- External Stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <title>
-    Unduh Aplikasi Al-Barzanji Nahdlatul Wathan (NW), teks arab✨, terjemah📖 dan audio🎵
+    Unduh Aplikasi Al-Barzanji Nahdlatul Wathan (NW), teks arab✨, terjemah📖
+    dan audio🎵
   </title>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <style>html {
+    scroll-behavior: smooth;
+  }
+  #fullscreen-container.visible {
+  visibility: visible;
+  opacity: 1;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header,
-    section {
-      min-height: 100vh;
-      /* Tinggi minimum sesuai layar */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    header {
-      background: linear-gradient(135deg, #067404, #81c784);
-      color: white;
-      padding: 40px 20px;
-    }
-
-    /* Flexbox untuk teks dan gambar header */
-    .header-content {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      max-width: 1200px;
-    }
-
-    .header-text {
-      flex: 1;
-      padding-right: 20px;
-    }
-
-    .header-text h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .header-text p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .header-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .header-image img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .shadow-svg {
-      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
-    }
+#fullscreen-container.invisible {
+  visibility: hidden;
+  opacity: 0;
+}
 
 
-    section {
-      flex-direction: column;
-      padding: 40px 20px;
-    }
-
-    section#about {
-      background-color: #f9f9f9;
-    }
-
-    section#about p {
-      text-align: justify;
-    }
-
-    section#about h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .pembungkus-teks-tentang {
-      max-width: 900px;
-    }
-
-    section#features ul {
-      text-align: justify;
-    }
-    section#features h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    section img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      margin: 20px 0;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    .download-btn {
-      background-color: #4caf50;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
-    }
-
-    .download-btn:hover {
-      background-color: #388e3c;
-    }
-
-    /* Slider */
-    #slider {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      margin: 40px auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-    }
-
-    .slides img {
-      width: 100vw;
-      flex-shrink: 0;
-      height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .nav-arrows {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-
-    .nav-arrows button {
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
-
-    .nav-arrows button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Fullscreen mode */
-    .fullscreen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 0s, opacity 0.5s;
-    }
-
-    .fullscreen.active {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .fullscreen img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      /* Contoh warna putih transparan */
-      color: #067404;
-      /* Warna teks */
-      /* Transparansi 80% */
-      backdrop-filter: blur(10px);
-      /* Efek blur */
-      -webkit-backdrop-filter: blur(10px);
-      /* Efek blur untuk WebKit */
-      z-index: 1000;
-      transform: translateY(100%);
-      /* Nav disembunyikan di awal */
-      transition: transform 0.3s ease;
-      /* Transisi kemunculan nav */
-    }
-
-    nav.show {
-      transform: translateY(0);
-      /* Nav muncul saat ada kelas 'show' */
-    }
-
-
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      background-color: #4caf50;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #388e3c;
-    }
-
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-      }
-
-      .header-text {
-        padding-right: 0;
-        text-align: center;
-      }
-
-      .header-image {
-        margin-top: 20px;
-      }
-
-      .header-text h1 {
-        font-size: 2.5rem;
-      }
-
-      .download-btn {
-        font-size: 1rem;
-        padding: 12px 24px;
-      }
-
-      section img {
-        max-width: 250px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .header-text h1 {
-        font-size: 2rem;
-      }
-
-      .download-btn {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-      }
-
-      section img {
-        max-width: 200px;
-      }
-
-      nav ul li {
-        margin: 0 2px;
-      }
-    }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body>
+<body class="font-sans bg-gray-100">
   <!-- Header dengan Teks dan Gambar -->
-  <header id="home">
-    <div class="header-content">
-      <div class="header-text">
-        <h1>Maulid Al-barzanji dan Lagu Lagu Perjuangan Nahdlatul Wathan (NW)</h1>
-        <p>
-          Aplikasi berbasis Android yang menyediakan Al-barzanji Nahdlatul Wathan (NW) dan
-          lagu-lagu perjuangan NW. Nikmati teks Arab, terjemahan, dan audio
-          dengan fitur yang lengkap dan menarik.
+  <header id="home"
+    class="min-h-screen flex justify-center items-center text-center bg-gradient-to-r from-green-700 to-green-300 text-white py-16">
+    <div class="max-w-screen-lg flex flex-col md:flex-row items-center">
+      <div class="text-left p-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Maulid Al-barzanji dan Lagu Lagu Perjuangan Nahdlatul Wathan (NW)
+        </h1>
+        <p class="text-lg md:text-xl mb-4">
+          Aplikasi berbasis Android yang menyediakan Al-barzanji Nahdlatul
+          Wathan (NW) dan lagu-lagu perjuangan NW. Nikmati teks Arab,
+          terjemahan, dan audio dengan fitur yang lengkap dan menarik.
         </p>
-        <a href="#" class="download-btn" onclick="downloadApp()"><i class="fa-regular fa-circle-down"></i> Unduh
-          Sekarang</a>
-        <a href="https://forms.gle/SUFLNF9HfraJmBWNA" class="download-btn" target="_blank"><i
-            class="fa-regular fa-file-lines"></i> Isi Kuesioner</a>
+        <!-- Pembungkus Grid untuk Tombol -->
+      <div class="flex flex-col md:flex-row gap-4">
+        <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow"
+          onclick="downloadApp()">
+          <i class="fa-regular fa-circle-down"></i> Unduh Sekarang
+        </a>
+        <a href="https://forms.gle/SUFLNF9HfraJmBWNA"
+          class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow"
+          target="_blank">
+          <i class="fa-regular fa-file-lines"></i> Bantu Isi Kuesioner
+        </a>
       </div>
-      <div class="header-image">
-        <img src="logoo.svg" alt="Logo Aplikasi Maulid al-barzanji Nahdlatul Wathan dan lagu-lagu perjuangan NW NWDI"
-          class="shadow-svg" onclick="openFullscreen(this)"/>
       </div>
+      <div class="p-4 hidden md:block">
+        <img src="logoo.svg" class="w-64 md:w-96 rounded-lg shadow-lg" alt="Logo Aplikasi Maulid al-barzanji Nahdlatul Wathan dan lagu-lagu perjuangan NW NWDI" onclick="openFullscreen(this)" />
+      </div>
+      
     </div>
   </header>
 
-  <!-- Slider Gambar -->
-  <section id="slider-section">
-    <div id="slider">
-      <div class="slides">
-        <img src="albarzanji day.jpg" alt="Tampilan halaman detail al barzanji nw mode terang"
-          onclick="openFullscreen(this)" />
-        <img src="albarzanji night.jpg" alt="Tampilan halaman detail al barzanji nw mode gelap"
-          onclick="openFullscreen(this)" />
-        <img src="baca day.jpg" alt="Tampilan halaman baca al barzanji nw yang sudah diurutkan mode terang"
-          onclick="openFullscreen(this)" />
-        <img src="baca night.jpg" alt="Tampilan halaman baca al barzanji nw yang sudah diurutkan mode gelap"
-          onclick="openFullscreen(this)" />
-        <img src="cari day.jpg" alt="Pencairian isi al barzanji nw mode terang" onclick="openFullscreen(this)" />
-        <img src="cari night.jpg" alt="Pencairian isi al barzanji nw mode gelap" onclick="openFullscreen(this)" />
-        <img src="daftarisi day.jpg" alt="halaman daftar isi al barzanji nw mode terang"
-          onclick="openFullscreen(this)" />
-        <img src="daftarisi night.jpg" alt="halaman daftar isi al barzanji nw mode malam"
-          onclick="openFullscreen(this)" />
-        <img src="intro day.jpg" alt="halaman awal atau flash screen al barzanji nw mode terang"
-          onclick="openFullscreen(this)" />
-        <img src="intro night.jpg" alt="halaman awal atau flash screen al barzanji nw mode malam"
-          onclick="openFullscreen(this)" />
-        <img src="lagu day.jpg" alt="halaman daftar lagu perjuangan nw mode terang" onclick="openFullscreen(this)" />
-        <img src="lagu night.jpg" alt="halaman daftar lagu perjuangan nw mode gelap" onclick="openFullscreen(this)" />
-        <img src="list baca day.jpg" alt="list baca albarzanji nw mode terang" onclick="openFullscreen(this)" />
-        <img src="list baca night.jpg" alt="list baca albarzanji nw mode malam" onclick="openFullscreen(this)" />
-        <img src="yamanyaru day.jpg" alt="Tampilan halaman detail yaman yaru lagu nw mode terang"
-          onclick="openFullscreen(this)" />
-        <img src="yamanyaru night.jpg" alt="Tampilan halaman detail yaman yaru lagu nw mode gelap"
-          onclick="openFullscreen(this)" />
-        <img src="tentang night.jpg" alt="Tampilan halaman tentang alarzanji nw mode gelap"
-          onclick="openFullscreen(this)" />
-        <img src="stelan day.jpg" alt="Tampilan halaman setelan mode terang"
-          onclick="openFullscreen(this)" />
-        <img src="setelan night.jpg" alt="Tampilan halaman setelan mode malam"
-          onclick="openFullscreen(this)" />
-      </div>
-      <div class="nav-arrows">
-        <button id="prev">&#10094;</button>
-        <button id="next">&#10095;</button>
+<!-- Slider Gambar -->
+<section id="slider-section" class="py-16 bg-white">
+  <div id="slider" class="container mx-auto">
+    <div class="relative overflow-hidden rounded-lg">
+      <div class="slides flex transition-transform duration-500">
+        <img src="albarzanji day.jpg" 
+             class="w-full max-h-screen object-cover" 
+             alt="Tampilan halaman detail al barzanji nw mode terang" 
+             onclick="openFullscreen(this)" />
+          <img src="albarzanji night.jpg" class="w-full max-h-screen object-cover" alt="Tampilan halaman detail al barzanji nw mode gelap"
+            onclick="openFullscreen(this)" />
+          <img src="baca day.jpg" class="w-full max-h-screen object-cover"
+            alt="Tampilan halaman baca al barzanji nw yang sudah diurutkan mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="baca night.jpg" class="w-full max-h-screen object-cover"
+            alt="Tampilan halaman baca al barzanji nw yang sudah diurutkan mode gelap" onclick="openFullscreen(this)" />
+          <img src="cari day.jpg" class="w-full max-h-screen object-cover" alt="Pencairian isi al barzanji nw mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="cari night.jpg" class="w-full max-h-screen object-cover" alt="Pencairian isi al barzanji nw mode gelap"
+            onclick="openFullscreen(this)" />
+          <img src="daftarisi day.jpg" class="w-full max-h-screen object-cover" alt="halaman daftar isi al barzanji nw mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="daftarisi night.jpg" class="w-full max-h-screen object-cover" alt="halaman daftar isi al barzanji nw mode malam"
+            onclick="openFullscreen(this)" />
+          <img src="intro day.jpg" class="w-full max-h-screen object-cover" alt="halaman awal atau flash screen al barzanji nw mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="intro night.jpg" class="w-full max-h-screen object-cover" alt="halaman awal atau flash screen al barzanji nw mode malam"
+            onclick="openFullscreen(this)" />
+          <img src="lagu day.jpg" class="w-full max-h-screen object-cover" alt="halaman daftar lagu perjuangan nw mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="lagu night.jpg" class="w-full max-h-screen object-cover" alt="halaman daftar lagu perjuangan nw mode gelap"
+            onclick="openFullscreen(this)" />
+          <img src="list baca day.jpg" class="w-full max-h-screen object-cover" alt="list baca albarzanji nw mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="list baca night.jpg" class="w-full max-h-screen object-cover" alt="list baca albarzanji nw mode malam"
+            onclick="openFullscreen(this)" />
+          <img src="yamanyaru day.jpg" class="w-full max-h-screen object-cover" alt="Tampilan halaman detail yaman yaru lagu nw mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="yamanyaru night.jpg" class="w-full max-h-screen object-cover" alt="Tampilan halaman detail yaman yaru lagu nw mode gelap"
+            onclick="openFullscreen(this)" />
+          <img src="tentang night.jpg" class="w-full max-h-screen object-cover" alt="Tampilan halaman tentang alarzanji nw mode gelap"
+            onclick="openFullscreen(this)" />
+          <img src="stelan day.jpg" class="w-full max-h-screen object-cover" alt="Tampilan halaman setelan mode terang"
+            onclick="openFullscreen(this)" />
+          <img src="setelan night.jpg" class="w-full max-h-screen object-cover" alt="Tampilan halaman setelan mode malam"
+            onclick="openFullscreen(this)" />
+        </div>
+        <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+          <button id="prev" class="bg-black bg-opacity-50 text-white p-2 rounded">
+            ‹
+          </button>
+        </div>
+        <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+          <button id="next" class="bg-black bg-opacity-50 text-white p-2 rounded">
+            ›
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Fullscreen container -->
-  <div id="fullscreen-container" class="fullscreen" onclick="closeFullscreen()">
-    <img id="fullscreen-image" src="" alt="Gambar Fullscreen" />
+  <!-- Fullscreen Modal -->
+  <div id="fullscreen-container"
+    class="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center invisible opacity-0 transition-opacity duration-300">
+    <img id="fullscreen-image" src="" alt="Gambar Fullscreen" class="max-w-full max-h-full rounded-lg" />
   </div>
 
+ <!-- Tentang Aplikasi -->
+<section id="about" class="bg-gray-100 py-16">
+  <div class="container mx-auto max-w-screen-md text-center px-4">
+    <h2 class="text-3xl font-bold mb-8">Tentang Aplikasi</h2>
+    <p class="text-lg mb-6 md:mb-4 text-justify">
+      Selamat datang di aplikasi inovatif yang dirancang khusus untuk
+      mempermudah akses dan penggunaan kitab Al-Barzanji serta lagu
+      perjuangan Nahdlatul Wathan (NW) secara digital. Aplikasi Android ini
+      adalah solusi ideal bagi jamaah Nahdlatul Wathan (NW) dan Nahdlatul
+      Wathan Diniyah Islamiyah (NWDI) untuk menikmati teks Al-Barzanji dan
+      koleksi lagu perjuangan NW dengan cara yang modern dan praktis.
+    </p>
+    <p class="text-lg mb-6 md:mb-4 text-justify">
+      "Maulid Al-barzanji dan Lagu Lagu Perjuangan Nahdlatul Wathan (NW)"
+      adalah aplikasi berbasis Android (minimal versi Lollipop 5.0) yang
+      menyediakan konten lengkap untuk Maulid Al-barzanji NW dan lagu-lagu
+      perjuangan NW.
+    </p>
+    <p class="text-lg mb-6 md:mb-4 text-justify">
+      Aplikasi ini berisi teks Arab, terjemahan, dan audio untuk Al-barzanji
+      dan lagu perjuangan NW. Tersedia dalam mode gelap, dapat digunakan
+      secara offline tanpa registrasi, dan gratis. Anda juga dapat mengatur
+      ukuran teks sesuai kebutuhan, menjadikannya aplikasi yang nyaman
+      digunakan dengan tampilan menarik.
+    </p>
+    
+    <p class="text-lg mb-4 text-justify">
+      Aplikasi ini dirancang dengan 💖 oleh
+      <strong>Bayu Kartawan✨</strong> pada tahun <strong>2024🚀</strong>.
+      Info lebih lanjut tentang pengembang dapat ditemukan melalui:
+      <strong>📷 Instagram </strong>:
+      <a href="https://www.instagram.com/blim.bink" target="_blank">@blim.bink</a><strong>, 📷 Facebook </strong>:
+      <a href="https://www.facebook.com/tuanpapuk.tuanpapuk" target="_blank">Blimbink Go</a>
+    </p>
+    <img src="1.png" alt="Gambar Aplikasi" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-8"
+      onclick="openFullscreen(this)" />
+    <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow inline-block"
+      onclick="downloadApp()">Unduh Sekarang</a>
+  </div>
+</section>
 
-  <!-- Tentang Aplikasi -->
-  <section id="about">
-    <div class="pembungkus-teks-tentang">
-      <h2>Tentang Aplikasi</h2>
-      <p>
-        Selamat datang di aplikasi inovatif yang dirancang khusus untuk mempermudah akses dan penggunaan kitab
-        Al-Barzanji serta lagu perjuangan Nahdlatul Wathan (NW) secara digital. Aplikasi Android ini adalah solusi ideal
-        bagi jamaah Nahdlatul Wathan (NW) dan Nahdlatul Wathan Diniyah Islamiyah (NWDI) untuk menikmati teks Al-Barzanji
-        dan koleksi lagu perjuangan NW dengan cara yang modern dan praktis.
-      </p><br>
-      <p>
-        "Maulid Al-barzanji dan Lagu Lagu Perjuangan Nahdlatul Wathan (NW)" adalah aplikasi berbasis Android (minimal
-        versi Lollipop
-        5.0) yang menyediakan konten lengkap untuk Maulid Al-barzanji NW dan lagu-lagu perjuangan NW.
-      </p><br>
-      <p>
-        Aplikasi ini berisi teks Arab, terjemahan, dan audio untuk Al-barzanji dan lagu perjuangan NW. Tersedia dalam
-        mode gelap, dapat digunakan secara offline tanpa registrasi, dan gratis. Anda juga dapat mengatur ukuran teks
-        sesuai kebutuhan, menjadikannya aplikasi yang nyaman digunakan dengan tampilan menarik.
-      </p><br>
-      <p>
-        Aplikasi ini dirancang dengan 💖 oleh <strong>Bayu Kartawan✨</strong> pada tahun <strong>2024🚀</strong>. Info
-        lebih lanjut
-        tentang pengembang dapat ditemukan melalui: <strong>📷 Instagram </strong>: <a
-          href="https://www.instagram.com/blim.bink" target="_blank">@blim.bink</a><strong>, 📷 Facebook </strong>: <a
-          href="https://www.facebook.com/tuanpapuk.tuanpapuk" target="_blank">Blimbink Go</a>
-      </p><br>
 
-      <img src="1.png" alt="Gambar Aplikasi albarzanji nw" onclick="openFullscreen(this)"/>
-      <br />
-      <a href="#" class="download-btn" onclick="downloadApp()"><i class="fa-regular fa-circle-down"></i> Unduh
-        Sekarang</a>
+
+  <!-- Fitur Utama -->
+<section id="features" class="py-16 bg-gray-50">
+  <div class="container mx-auto max-w-screen-lg">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Fitur Utama</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center justify-center mb-4">
+          <svg class="w-12 h-12 text-green-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2a10 10 0 00-10 10 10 10 0 0010 10 10 10 0 0010-10A10 10 0 0012 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Konten Lengkap</h3>
+        <p class="text-gray-700">
+          Qiroatul fatihah, Surah yaasin, Sholawat fathih, Al-barzanji,
+          Tholaal Badru ‘alaina, Iilahitam, Sholawat badriah, Sholawat
+          nahdlatain, Lillahi zainuddin, Do’a pusaka, Do’a do’a, Antiya
+          Pancor, Ya Fata Sasak, Ya dzal jala liwal iqram, Nahdlatain, Ya man
+          yarumul ula, Obat sakit jahil, Ahlan biwaf bizairi & pacu gama’,
+          Mars Hultah NWDI, Pacu gama’, Tanawwaroma, Bersatu haluwan, Kami
+          benihana NW, Mars NWDI dan NWDI daiman abada
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center justify-center mb-4">
+          <svg class="w-12 h-12 text-green-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 11.5V3c0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1v8.5c-.6.4-1 1-1 1v8.5c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-8.5c.6-.4 1-1 1-1zm-1 8.5H5v-7h15v7zm-6-4h-2v-2h2v2zm0-4h-2V7h2v2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Offline dan Gratis</h3>
+        <p class="text-gray-700">
+          Aplikasi dapat digunakan tanpa koneksi internet dan tanpa biaya.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center justify-center mb-4">
+          <svg class="w-12 h-12 text-green-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3h-2V1H7v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h2v2h10v-2h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H8v-2h4v2zm4-4H8v-2h8v2zm0-4H8V7h8v2zm2 10H5V5h2V3h10v2h2v16z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Dukungan Mode Gelap</h3>
+        <p class="text-gray-700">
+          Nikmati pengalaman pengguna yang lebih nyaman dengan mode gelap.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center justify-center mb-4">
+          <svg class="w-12 h-12 text-green-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3h-2V1H7v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h2v2h10v-2h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H8v-2h4v2zm4-4H8v-2h8v2zm0-4H8V7h8v2zm2 10H5V5h2V3h10v2h2v16z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Teks Dapat Diatur</h3>
+        <p class="text-gray-700">
+          Ukuran teks dapat diatur sesuai kebutuhan pengguna.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center justify-center mb-4">
+          <svg class="w-12 h-12 text-green-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 11.5V3c0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1v8.5c-.6.4-1 1-1 1v8.5c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-8.5c.6-.4 1-1 1-1zm-1 8.5H5v-7h15v7zm-6-4h-2v-2h2v2zm0-4h-2V7h2v2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Tampilan Menarik</h3>
+        <p class="text-gray-700">
+          Desain antarmuka yang modern dan mudah digunakan.
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Fitur Utama Aplikasi -->
-  <section id="features">
-    <h2>Fitur Utama</h2>
-    <div class="pembungkus-teks-tentang">
-      <ul>
-        <li>
-          <strong>Konten Lengkap Al-barzanji NW dan lagu-lagu
-            perjuangan NW dengan teks Arab, terjemahan, dan audio diantaranya:</strong> Qiroatul fatihah, Surah yaasin,
-          Sholawat fathih, Al-barzanji, Tholaal Badru ‘alaina, Iilahitam, Sholawat badriah, Sholawat nahdlatain, Lillahi
-          zainuddin, Do’a pusaka, Do’a do’a, Antiya Pancor, Ya Fata Sasak, Ya dzal jala liwal iqram, Nahdlatain, Ya man
-          yarumul ula, Obat sakit jahil, Ahlan biwaf bizairi & pacu gama’, Mars Hultah NWDI, Pacu gama’, Tanawwaroma,
-          Bersatu haluwan, Kami benihana NW, Mars NWDI dan NWDI daiman abada
 
-        </li>
-        <li>
-          <strong>Offline dan Gratis:</strong> Aplikasi dapat digunakan tanpa
-          koneksi internet dan tanpa biaya.
-        </li>
-        <li>
-          <strong>Dukungan Mode Gelap:</strong> Nikmati pengalaman pengguna yang
-          lebih nyaman dengan mode gelap.
-        </li>
-        <li>
-          <strong>Teks Dapat Diatur:</strong> Ukuran teks dapat diatur sesuai
-          kebutuhan pengguna.
-        </li>
-        <li>
-          <strong>Tampilan Menarik:</strong> Desain antarmuka yang modern dan
-          mudah digunakan.
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Navbar untuk Scroll -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="#home" class="nav-link">Beranda</a></li>
-      <li><a href="#slider-section" class="nav-link">Galeri</a></li>
-      <li><a href="#about" class="nav-link">Tentang</a></li>
-      <li><a href="#features" class="nav-link">Fitur</a></li>
-    </ul>
-  </nav>
+  <nav id="navbar"
+  class="fixed bottom-0 w-full bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-lg py-4 transform translate-y-0 transition-transform duration-300">
+  <ul class="flex justify-center space-x-4">
+    <li><a href="#home" class="text-green-700 font-bold">Beranda</a></li>
+    <li><a href="#slider-section" class="text-green-700 font-bold">Galeri</a></li>
+    <li><a href="#about" class="text-green-700 font-bold">Tentang</a></li>
+    <li><a href="#features" class="text-green-700 font-bold">Fitur</a></li>
+  </ul>
+</nav>
 
 
   <!-- Script untuk SweetAlert dan Slider -->
@@ -539,77 +336,73 @@
     const next = document.getElementById("next");
 
     let counter = 0;
-    let size = images[0].clientWidth;
+    let size = images[0].clientWidth;  // Mendapatkan lebar gambar
 
     next.addEventListener("click", () => {
-      if (counter >= images.length - 1) return;
+      if (counter >= images.length - 1) return;  // Jika sudah di gambar terakhir
       counter++;
-      slides.style.transform = "translateX(" + -size * counter + "px)";
+      slides.style.transform = "translateX(" + (-size * counter) + "px)";
     });
 
     prev.addEventListener("click", () => {
-      if (counter <= 0) return;
+      if (counter <= 0) return;  // Jika sudah di gambar pertama
       counter--;
-      slides.style.transform = "translateX(" + -size * counter + "px)";
+      slides.style.transform = "translateX(" + (-size * counter) + "px)";
     });
 
     window.addEventListener("resize", () => {
-      size = images[0].clientWidth; // Update ukuran gambar saat di-resize
-      slides.style.transform = "translateX(" + -size * counter + "px)";
+      size = images[0].clientWidth;  // Update ukuran gambar saat di-resize
+      slides.style.transform = "translateX(" + (-size * counter) + "px)";
     });
 
     // Fungsi untuk membuka gambar dalam mode full screen
     function openFullscreen(img) {
-      const fullscreenContainer = document.getElementById("fullscreen-container");
-      const fullscreenImage = document.getElementById("fullscreen-image");
-      fullscreenImage.src = img.src;
-      fullscreenContainer.classList.add("active");
-    }
+  const fullscreenContainer = document.getElementById("fullscreen-container");
+  const fullscreenImage = document.getElementById("fullscreen-image");
 
-    // Fungsi untuk menutup mode full screen
-    function closeFullscreen() {
-      const fullscreenContainer = document.getElementById("fullscreen-container");
-      fullscreenContainer.classList.remove("active");
-    }
+  // Set sumber gambar ke elemen fullscreen
+  fullscreenImage.src = img.src;
 
-    // Menambahkan event listener ke gambar untuk membuka mode full screen
-    images.forEach((image) => {
-      image.addEventListener("click", () => openFullscreen(image));
-    });
+  // Tampilkan elemen fullscreen
+  fullscreenContainer.classList.remove("invisible", "opacity-0");
+  fullscreenContainer.classList.add("visible", "opacity-100");
+
+  // Menutup fullscreen saat klik pada gambar
+  fullscreenContainer.onclick = function() {
+    fullscreenContainer.classList.add("invisible", "opacity-0");
+    fullscreenContainer.classList.remove("visible", "opacity-100");
+  };
+}
+
 
     // Smooth scroll on navbar link click
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function (e) {
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
+        const targetId = this.getAttribute("href");
         const targetSection = document.querySelector(targetId);
 
         // Scroll to the section smoothly
         targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+          behavior: "smooth",
+          block: "start",
         });
       });
     });
 
-
-    //logika muncul tutup navbar
-    window.addEventListener('scroll', function () {
-      const navbar = document.getElementById('navbar');
-      const headerHeight = document.querySelector('header').offsetHeight;
-      const sliderSectionTop = document.getElementById('slider-section').offsetTop;
-
-      if (window.scrollY > headerHeight || window.scrollY > (sliderSectionTop - window.innerHeight + 10)) {
-        navbar.classList.add('show'); // Menampilkan nav saat scroll di bawah header atau bagian galeri
-      } else {
-        navbar.classList.remove('show'); // Menyembunyikan nav saat berada di dalam header atau di awal galeri
-      }
-    });
-
+    // Contoh: Menampilkan navbar setelah scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 100) {  // Atur jarak scroll sesuai kebutuhan
+    navbar.classList.remove('translate-y-full');
+    navbar.classList.add('translate-y-0');
+  } else {
+    navbar.classList.remove('translate-y-0');
+    navbar.classList.add('translate-y-full');
+  }
+});
 
   </script>
-
-
 </body>
 
 </html>
